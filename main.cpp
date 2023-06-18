@@ -50,7 +50,7 @@ int main()
         recv(client,recdata,1024,0); 
         printf("%s共接收到%d字节数据\n",recdata,strlen(recdata));
 
-        char senddata[1024] = "hello,client!";
+        char senddata[1024] = "hello,client!\n";
         send(client,senddata,strlen(senddata),0);
         closesocket(client);
         
@@ -62,4 +62,17 @@ int main()
 
     getchar();
     return 0;
+}
+
+//发送网页
+void sendhtml(SOCKET s,char *filename)
+{
+    FILE *pfile = fopen(filename,"r");
+    if(pfile==NULL)
+    {
+        printf("打开文件失败\n");
+        return;
+    }
+
+
 }
