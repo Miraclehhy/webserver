@@ -9,6 +9,7 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
+				"-lws2_32",//使用ws_32库的时候添加
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
