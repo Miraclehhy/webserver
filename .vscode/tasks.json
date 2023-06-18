@@ -6,7 +6,7 @@
 			"label": "C/C++: g++.exe 生成活动文件",
 			"command": "D:/mingw64/bin/g++.exe",
 			"args": [
-				"-fdiagnostics-color=always",
+				"-fdiagnostics-color=always",//标出错误颜色
 				"-g",
 				"${file}",
 				"-lws2_32",//使用ws_32库的时候添加,新建项目时删去
